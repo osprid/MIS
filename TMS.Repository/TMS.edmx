@@ -1,0 +1,1702 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TMSModelStoreContainer">
+          <EntitySet Name="tbl_AcademicGroup" EntityType="TMSModel.Store.tbl_AcademicGroup" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_AcademicYear" EntityType="TMSModel.Store.tbl_AcademicYear" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_Address" EntityType="TMSModel.Store.tbl_Address" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_BannedIP" EntityType="TMSModel.Store.tbl_BannedIP" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_City" EntityType="TMSModel.Store.tbl_City" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_Country" EntityType="TMSModel.Store.tbl_Country" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_Course" EntityType="TMSModel.Store.tbl_Course" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_CourseFeeTemplet" EntityType="TMSModel.Store.tbl_CourseFeeTemplet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_Division" EntityType="TMSModel.Store.tbl_Division" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_Document" EntityType="TMSModel.Store.tbl_Document" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_DocumentPath" EntityType="TMSModel.Store.tbl_DocumentPath" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_Faculty" EntityType="TMSModel.Store.tbl_Faculty" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_FeeComponent" EntityType="TMSModel.Store.tbl_FeeComponent" store:Type="Tables" store:Schema="dbo" store:Name="tbl_FeeComponent">
+            <DefiningQuery>SELECT 
+      [tbl_FeeComponent].[FeeComponentID] AS [FeeComponentID], 
+      [tbl_FeeComponent].[Name] AS [Name], 
+      [tbl_FeeComponent].[Abbrevation] AS [Abbrevation], 
+      [tbl_FeeComponent].[Description] AS [Description], 
+      [tbl_FeeComponent].[CreatedBy] AS [CreatedBy], 
+      [tbl_FeeComponent].[CreatedDateTime] AS [CreatedDateTime], 
+      [tbl_FeeComponent].[UpdateBy] AS [UpdateBy], 
+      [tbl_FeeComponent].[UpdateDate] AS [UpdateDate], 
+      [tbl_FeeComponent].[Status] AS [Status]
+      FROM [dbo].[tbl_FeeComponent] AS [tbl_FeeComponent]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tbl_FinancialYear" EntityType="TMSModel.Store.tbl_FinancialYear" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_GlobalStandard" EntityType="TMSModel.Store.tbl_GlobalStandard" store:Type="Tables" store:Schema="dbo" store:Name="tbl_GlobalStandard">
+            <DefiningQuery>SELECT 
+      [tbl_GlobalStandard].[GlobalStandardID] AS [GlobalStandardID], 
+      [tbl_GlobalStandard].[Name] AS [Name], 
+      [tbl_GlobalStandard].[Description] AS [Description], 
+      [tbl_GlobalStandard].[CreatedBy] AS [CreatedBy], 
+      [tbl_GlobalStandard].[CreatedDate] AS [CreatedDate], 
+      [tbl_GlobalStandard].[Updatedby] AS [Updatedby], 
+      [tbl_GlobalStandard].[UpdatedDate] AS [UpdatedDate], 
+      [tbl_GlobalStandard].[status] AS [status]
+      FROM [dbo].[tbl_GlobalStandard] AS [tbl_GlobalStandard]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tbl_GlobalStandardNext" EntityType="TMSModel.Store.tbl_GlobalStandardNext" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_GlobalStandardPrevious" EntityType="TMSModel.Store.tbl_GlobalStandardPrevious" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_GlobalSubject" EntityType="TMSModel.Store.tbl_GlobalSubject" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_GoverningBody" EntityType="TMSModel.Store.tbl_GoverningBody" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_Institute" EntityType="TMSModel.Store.tbl_Institute" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_InstituteBranch" EntityType="TMSModel.Store.tbl_InstituteBranch" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_Quota" EntityType="TMSModel.Store.tbl_Quota" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_Reference" EntityType="TMSModel.Store.tbl_Reference" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_RollNo" EntityType="TMSModel.Store.tbl_RollNo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_RollNoPattern" EntityType="TMSModel.Store.tbl_RollNoPattern" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_State" EntityType="TMSModel.Store.tbl_State" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_UnauthorisedAccess" EntityType="TMSModel.Store.tbl_UnauthorisedAccess" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_User" EntityType="TMSModel.Store.tbl_User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_UserPasswordLog" EntityType="TMSModel.Store.tbl_UserPasswordLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_UserSessionLog" EntityType="TMSModel.Store.tbl_UserSessionLog" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_tbl_GoverningBody_tbl_GoverningBody" Association="TMSModel.Store.FK_tbl_GoverningBody_tbl_GoverningBody">
+            <End Role="tbl_Address" EntitySet="tbl_Address" />
+            <End Role="tbl_GoverningBody" EntitySet="tbl_GoverningBody" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Institute_tbl_Address" Association="TMSModel.Store.FK_tbl_Institute_tbl_Address">
+            <End Role="tbl_Address" EntitySet="tbl_Address" />
+            <End Role="tbl_Institute" EntitySet="tbl_Institute" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_InstituteBranch_tbl_Address" Association="TMSModel.Store.FK_tbl_InstituteBranch_tbl_Address">
+            <End Role="tbl_Address" EntitySet="tbl_Address" />
+            <End Role="tbl_InstituteBranch" EntitySet="tbl_InstituteBranch" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tbl_AcademicGroup">
+          <Key>
+            <PropertyRef Name="AcademicGroupID" />
+          </Key>
+          <Property Name="AcademicGroupID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GlabalStandardID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_AcademicYear">
+          <Key>
+            <PropertyRef Name="AcademicYearID" />
+          </Key>
+          <Property Name="AcademicYearID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AcademicYear" Type="nvarchar" MaxLength="50" />
+          <Property Name="Abbreviation" Type="nvarchar" MaxLength="20" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_Address">
+          <Key>
+            <PropertyRef Name="AddressID" />
+          </Key>
+          <Property Name="AddressID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ContactType" Type="nvarchar" MaxLength="5" />
+          <Property Name="ContactID" Type="int" />
+          <Property Name="AddressType" Type="int" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="150" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="150" />
+          <Property Name="Landmark" Type="nvarchar" MaxLength="50" />
+          <Property Name="Street" Type="nvarchar" MaxLength="50" />
+          <Property Name="CityID" Type="int" />
+          <Property Name="StateID" Type="int" />
+          <Property Name="CountryID" Type="int" />
+          <Property Name="Postalcode" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CretedDatetime" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" />
+          <Property Name="UpdatedDatetime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tbl_BannedIP">
+          <Key>
+            <PropertyRef Name="BannedIPID" />
+          </Key>
+          <Property Name="BannedIPID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="10" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDateTime" Type="datetime" />
+          <Property Name="UpdateBy" Type="int" />
+          <Property Name="UpdateDateTime" Type="datetime" />
+          <Property Name="status" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_City">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StateID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" />
+          <Property Name="ShortName" Type="nvarchar" MaxLength="15" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_Country">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" />
+          <Property Name="ShortName" Type="nvarchar" MaxLength="15" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_Course">
+          <Key>
+            <PropertyRef Name="CourseID" />
+          </Key>
+          <Property Name="CourseID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Duration" Type="nvarchar" MaxLength="20" />
+          <Property Name="HasYears" Type="nvarchar" MaxLength="2" />
+          <Property Name="NoofYears" Type="int" />
+          <Property Name="GoverningBodyID" Type="int" />
+          <Property Name="GlabalStandardID" Type="int" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_CourseFeeTemplet">
+          <Key>
+            <PropertyRef Name="CourseFeeTempletID" />
+          </Key>
+          <Property Name="CourseFeeTempletID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="QuotaID" Type="int" />
+          <Property Name="CourseID" Type="int" />
+          <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+          <Property Name="FeeComponentID" Type="int" />
+          <Property Name="Abbrevation" Type="nvarchar" MaxLength="30" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="IsRefundale" Type="int" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDateTime" Type="datetime" />
+          <Property Name="UpdateBy" Type="int" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_Division">
+          <Key>
+            <PropertyRef Name="DivisionID" />
+          </Key>
+          <Property Name="DivisionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="CourseID" Type="int" />
+          <Property Name="Capacity" Type="int" />
+          <Property Name="AcademicYear" Type="int" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_Document">
+          <Key>
+            <PropertyRef Name="DocumentID" />
+          </Key>
+          <Property Name="DocumentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_DocumentPath">
+          <Key>
+            <PropertyRef Name="DocumentPathID" />
+          </Key>
+          <Property Name="DocumentPathID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DocumentID" Type="int" />
+          <Property Name="ContactType" Type="nvarchar" MaxLength="5" />
+          <Property Name="ContactID" Type="int" />
+          <Property Name="Path" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_Faculty">
+          <Key>
+            <PropertyRef Name="FacultyID" />
+          </Key>
+          <Property Name="FID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FacultyID" Type="nvarchar" Nullable="false" MaxLength="32" StoreGeneratedPattern="Computed" />
+          <Property Name="Title" Type="nvarchar" MaxLength="30" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="152" StoreGeneratedPattern="Computed" />
+          <Property Name="DOB" Type="datetime" />
+          <Property Name="MaritalStatus" Type="int" />
+          <Property Name="AddressID" Type="int" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReferenceID" Type="int" />
+          <Property Name="JoinDate" Type="datetime" />
+          <Property Name="LeaveDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDateTime" Type="datetime" />
+          <Property Name="UpdateBy" Type="int" />
+          <Property Name="UpdateDatetime" Type="datetime" />
+          <Property Name="Gender" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'TMS.dbo.tbl_FeeComponent' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="tbl_FeeComponent">
+          <Key>
+            <PropertyRef Name="FeeComponentID" />
+          </Key>
+          <Property Name="FeeComponentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Abbrevation" Type="nvarchar" MaxLength="30" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDateTime" Type="datetime" />
+          <Property Name="UpdateBy" Type="int" />
+          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_FinancialYear">
+          <Key>
+            <PropertyRef Name="FinancialYearID" />
+          </Key>
+          <Property Name="FinancialYearID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FinancialYear" Type="nvarchar" MaxLength="50" />
+          <Property Name="Abbreviation" Type="nvarchar" MaxLength="20" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'TMS.dbo.tbl_GlobalStandard' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="tbl_GlobalStandard">
+          <Key>
+            <PropertyRef Name="GlobalStandardID" />
+          </Key>
+          <Property Name="GlobalStandardID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="5" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_GlobalStandardNext">
+          <Key>
+            <PropertyRef Name="GlobalStandardPreviousID" />
+          </Key>
+          <Property Name="GlobalStandardPreviousID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NextStandardID" Type="int" />
+          <Property Name="CurrentStandardID" Type="int" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_GlobalStandardPrevious">
+          <Key>
+            <PropertyRef Name="GlobalStandardPreviousID" />
+          </Key>
+          <Property Name="GlobalStandardPreviousID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PreviousStandardID" Type="int" />
+          <Property Name="CurrentStandardID" Type="int" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_GlobalSubject">
+          <Key>
+            <PropertyRef Name="QuotaID" />
+          </Key>
+          <Property Name="QuotaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GlabalStandardID" Type="int" />
+          <Property Name="AcadamicGroupMasterID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Abbrivation" Type="nvarchar" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_GoverningBody">
+          <Key>
+            <PropertyRef Name="GoverningBodyID" />
+          </Key>
+          <Property Name="GoverningBodyID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsSubType" Type="nvarchar" MaxLength="2" />
+          <Property Name="ParentGoverningBody" Type="int" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" Nullable="false" MaxLength="2" />
+          <Property Name="AddressID" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Institute">
+          <Key>
+            <PropertyRef Name="Institute" />
+          </Key>
+          <Property Name="Institute" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="AddressID" Type="int" />
+          <Property Name="Status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_InstituteBranch">
+          <Key>
+            <PropertyRef Name="BranchID" />
+          </Key>
+          <Property Name="BranchID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BranchName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="description" Type="nvarchar" MaxLength="250" />
+          <Property Name="AddressID" Type="int" Nullable="false" />
+          <Property Name="InstituteID" Type="int" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDatetime" Type="datetime" />
+          <Property Name="UpdatedBy" Type="int" />
+          <Property Name="UpdateDatetime" Type="datetime" />
+          <Property Name="status" Type="nchar" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="tbl_Quota">
+          <Key>
+            <PropertyRef Name="QuotaID" />
+          </Key>
+          <Property Name="QuotaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Abbrivation" Type="nvarchar" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_Reference">
+          <Key>
+            <PropertyRef Name="ReferenceID" />
+          </Key>
+          <Property Name="ReferenceID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="UpdateBy" Type="int" />
+          <Property Name="UpdateDateTime" Type="datetime" />
+          <Property Name="CreatedDateTime" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_RollNo">
+          <Key>
+            <PropertyRef Name="RollNOID" />
+          </Key>
+          <Property Name="RollNOID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RollNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="RollNoCount" Type="int" />
+          <Property Name="RollNoPatternID" Type="int" />
+          <Property Name="StudentID" Type="int" />
+          <Property Name="CourseID" Type="int" />
+          <Property Name="DivisionID" Type="int" />
+          <Property Name="AcademicYear" Type="int" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_RollNoPattern">
+          <Key>
+            <PropertyRef Name="RollNoPatternID" />
+          </Key>
+          <Property Name="RollNoPatternID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_State">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CountryID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" />
+          <Property Name="ShortName" Type="nvarchar" MaxLength="15" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Updatedby" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="status" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tbl_UnauthorisedAccess">
+          <Key>
+            <PropertyRef Name="UnauthorisedAccessID" />
+          </Key>
+          <Property Name="UnauthorisedAccessID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="URL" Type="nvarchar" MaxLength="100" />
+          <Property Name="AccessDatetime" Type="datetime" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDateTime" Type="datetime" />
+          <Property Name="UpdateBy" Type="int" />
+          <Property Name="UpdateDateTime" Type="datetime" />
+          <Property Name="status" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="UserType" Type="int" />
+          <Property Name="UserName" Type="int" />
+          <Property Name="Firstname" Type="nvarchar" MaxLength="50" />
+          <Property Name="Middlename" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="152" StoreGeneratedPattern="Computed" />
+          <Property Name="DOB" Type="datetime" />
+          <Property Name="Gender" Type="int" />
+          <Property Name="Mobile1" Type="int" />
+          <Property Name="Mobile1C" Type="nvarchar" MaxLength="10" />
+          <Property Name="Mobile2" Type="int" />
+          <Property Name="Mobile2C" Type="nvarchar" MaxLength="10" />
+          <Property Name="AddressID" Type="int" />
+          <Property Name="DepartmentID" Type="int" />
+          <Property Name="EMail" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProfilePicPath" Type="text" />
+          <Property Name="StartDatetime" Type="datetime" />
+          <Property Name="ExpiryDatetime" Type="datetime" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDateTime" Type="datetime" />
+          <Property Name="UpdateBy" Type="int" />
+          <Property Name="UpdateDateTime" Type="datetime" />
+          <Property Name="status" Type="int" />
+          <Property Name="IsApproved" Type="int" />
+          <Property Name="ApprovedBy" Type="int" />
+          <Property Name="IsEmailConfirmed" Type="int" />
+          <Property Name="IsPassNeverExpired" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_UserPasswordLog">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Password" Type="int" />
+          <Property Name="StartDatetime" Type="datetime" />
+          <Property Name="EndDatetime" Type="datetime" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDateTime" Type="datetime" />
+          <Property Name="UpdateBy" Type="int" />
+          <Property Name="UpdateDateTime" Type="datetime" />
+          <Property Name="status" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_UserSessionLog">
+          <Key>
+            <PropertyRef Name="UserSessionID" />
+          </Key>
+          <Property Name="UserSessionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="SignInDatetime" Type="datetime" />
+          <Property Name="SignOutDatetime" Type="datetime" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDateTime" Type="datetime" />
+          <Property Name="UpdateBy" Type="int" />
+          <Property Name="UpdateDateTime" Type="datetime" />
+          <Property Name="status" Type="int" />
+        </EntityType>
+        <Association Name="FK_tbl_GoverningBody_tbl_GoverningBody">
+          <End Role="tbl_Address" Type="TMSModel.Store.tbl_Address" Multiplicity="0..1" />
+          <End Role="tbl_GoverningBody" Type="TMSModel.Store.tbl_GoverningBody" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="tbl_GoverningBody">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Institute_tbl_Address">
+          <End Role="tbl_Address" Type="TMSModel.Store.tbl_Address" Multiplicity="0..1" />
+          <End Role="tbl_Institute" Type="TMSModel.Store.tbl_Institute" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="tbl_Institute">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_InstituteBranch_tbl_Address">
+          <End Role="tbl_Address" Type="TMSModel.Store.tbl_Address" Multiplicity="1" />
+          <End Role="tbl_InstituteBranch" Type="TMSModel.Store.tbl_InstituteBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="tbl_InstituteBranch">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TMSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="TMSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_AcademicGroup" EntityType="TMSModel.tbl_AcademicGroup" />
+          <EntitySet Name="tbl_AcademicYear" EntityType="TMSModel.tbl_AcademicYear" />
+          <EntitySet Name="tbl_BannedIP" EntityType="TMSModel.tbl_BannedIP" />
+          <EntitySet Name="tbl_City" EntityType="TMSModel.tbl_City" />
+          <EntitySet Name="tbl_Country" EntityType="TMSModel.tbl_Country" />
+          <EntitySet Name="tbl_Course" EntityType="TMSModel.tbl_Course" />
+          <EntitySet Name="tbl_CourseFeeTemplet" EntityType="TMSModel.tbl_CourseFeeTemplet" />
+          <EntitySet Name="tbl_Division" EntityType="TMSModel.tbl_Division" />
+          <EntitySet Name="tbl_Document" EntityType="TMSModel.tbl_Document" />
+          <EntitySet Name="tbl_DocumentPath" EntityType="TMSModel.tbl_DocumentPath" />
+          <EntitySet Name="tbl_Faculty" EntityType="TMSModel.tbl_Faculty" />
+          <EntitySet Name="tbl_FeeComponent" EntityType="TMSModel.tbl_FeeComponent" />
+          <EntitySet Name="tbl_FinancialYear" EntityType="TMSModel.tbl_FinancialYear" />
+          <EntitySet Name="tbl_GlobalStandard" EntityType="TMSModel.tbl_GlobalStandard" />
+          <EntitySet Name="tbl_GlobalStandardNext" EntityType="TMSModel.tbl_GlobalStandardNext" />
+          <EntitySet Name="tbl_GlobalStandardPrevious" EntityType="TMSModel.tbl_GlobalStandardPrevious" />
+          <EntitySet Name="tbl_GlobalSubject" EntityType="TMSModel.tbl_GlobalSubject" />
+          <EntitySet Name="tbl_Institute" EntityType="TMSModel.tbl_Institute" />
+          <EntitySet Name="tbl_Quota" EntityType="TMSModel.tbl_Quota" />
+          <EntitySet Name="tbl_Reference" EntityType="TMSModel.tbl_Reference" />
+          <EntitySet Name="tbl_RollNo" EntityType="TMSModel.tbl_RollNo" />
+          <EntitySet Name="tbl_RollNoPattern" EntityType="TMSModel.tbl_RollNoPattern" />
+          <EntitySet Name="tbl_State" EntityType="TMSModel.tbl_State" />
+          <EntitySet Name="tbl_UnauthorisedAccess" EntityType="TMSModel.tbl_UnauthorisedAccess" />
+          <EntitySet Name="tbl_User" EntityType="TMSModel.tbl_User" />
+          <EntitySet Name="tbl_UserPasswordLog" EntityType="TMSModel.tbl_UserPasswordLog" />
+          <EntitySet Name="tbl_UserSessionLog" EntityType="TMSModel.tbl_UserSessionLog" />
+          <EntitySet Name="tbl_Address" EntityType="TMSModel.tbl_Address" />
+          <EntitySet Name="tbl_GoverningBody" EntityType="TMSModel.tbl_GoverningBody" />
+          <AssociationSet Name="FK_tbl_Institute_tbl_Address" Association="TMSModel.FK_tbl_Institute_tbl_Address">
+            <End Role="tbl_Address" EntitySet="tbl_Address" />
+            <End Role="tbl_Institute" EntitySet="tbl_Institute" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_GoverningBody_tbl_GoverningBody" Association="TMSModel.FK_tbl_GoverningBody_tbl_GoverningBody">
+            <End Role="tbl_Address" EntitySet="tbl_Address" />
+            <End Role="tbl_GoverningBody" EntitySet="tbl_GoverningBody" />
+          </AssociationSet>
+          <EntitySet Name="tbl_InstituteBranch" EntityType="TMSModel.tbl_InstituteBranch" />
+          <AssociationSet Name="FK_tbl_InstituteBranch_tbl_Address" Association="TMSModel.FK_tbl_InstituteBranch_tbl_Address">
+            <End Role="tbl_Address" EntitySet="tbl_Address" />
+            <End Role="tbl_InstituteBranch" EntitySet="tbl_InstituteBranch" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tbl_AcademicGroup">
+          <Key>
+            <PropertyRef Name="AcademicGroupID" />
+          </Key>
+          <Property Name="AcademicGroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GlabalStandardID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_AcademicYear">
+          <Key>
+            <PropertyRef Name="AcademicYearID" />
+          </Key>
+          <Property Name="AcademicYearID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AcademicYear" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Abbreviation" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="StartDate" Type="DateTime" />
+          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_BannedIP">
+          <Key>
+            <PropertyRef Name="BannedIPID" />
+          </Key>
+          <Property Name="BannedIPID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IPAddress" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDateTime" Type="DateTime" />
+          <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="UpdateDateTime" Type="DateTime" />
+          <Property Name="status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_City">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StateID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="ShortName" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_Country">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="ShortName" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_Course">
+          <Key>
+            <PropertyRef Name="CourseID" />
+          </Key>
+          <Property Name="CourseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Duration" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="HasYears" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="NoofYears" Type="Int32" />
+          <Property Name="GoverningBodyID" Type="Int32" />
+          <Property Name="GlabalStandardID" Type="Int32" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_CourseFeeTemplet">
+          <Key>
+            <PropertyRef Name="CourseFeeTempletID" />
+          </Key>
+          <Property Name="CourseFeeTempletID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QuotaID" Type="Int32" />
+          <Property Name="CourseID" Type="Int32" />
+          <Property Name="Amount" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FeeComponentID" Type="Int32" />
+          <Property Name="Abbrevation" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="IsRefundale" Type="Int32" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDateTime" Type="DateTime" />
+          <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="UpdateDate" Type="DateTime" />
+          <Property Name="Status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_Division">
+          <Key>
+            <PropertyRef Name="DivisionID" />
+          </Key>
+          <Property Name="DivisionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CourseID" Type="Int32" />
+          <Property Name="Capacity" Type="Int32" />
+          <Property Name="AcademicYear" Type="Int32" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_Document">
+          <Key>
+            <PropertyRef Name="DocumentID" />
+          </Key>
+          <Property Name="DocumentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_DocumentPath">
+          <Key>
+            <PropertyRef Name="DocumentPathID" />
+          </Key>
+          <Property Name="DocumentPathID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DocumentID" Type="Int32" />
+          <Property Name="ContactType" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="ContactID" Type="Int32" />
+          <Property Name="Path" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_Faculty">
+          <Key>
+            <PropertyRef Name="FacultyID" />
+          </Key>
+          <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FacultyID" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Title" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="152" Unicode="true" FixedLength="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="DOB" Type="DateTime" />
+          <Property Name="MaritalStatus" Type="Int32" />
+          <Property Name="AddressID" Type="Int32" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ReferenceID" Type="Int32" />
+          <Property Name="JoinDate" Type="DateTime" />
+          <Property Name="LeaveDate" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDateTime" Type="DateTime" />
+          <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="UpdateDatetime" Type="DateTime" />
+          <Property Name="Gender" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_FeeComponent">
+          <Key>
+            <PropertyRef Name="FeeComponentID" />
+          </Key>
+          <Property Name="FeeComponentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Abbrevation" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDateTime" Type="DateTime" />
+          <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="UpdateDate" Type="DateTime" />
+          <Property Name="Status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_FinancialYear">
+          <Key>
+            <PropertyRef Name="FinancialYearID" />
+          </Key>
+          <Property Name="FinancialYearID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FinancialYear" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Abbreviation" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="StartDate" Type="DateTime" />
+          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_GlobalStandard">
+          <Key>
+            <PropertyRef Name="GlobalStandardID" />
+          </Key>
+          <Property Name="GlobalStandardID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_GlobalStandardNext">
+          <Key>
+            <PropertyRef Name="GlobalStandardPreviousID" />
+          </Key>
+          <Property Name="GlobalStandardPreviousID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NextStandardID" Type="Int32" />
+          <Property Name="CurrentStandardID" Type="Int32" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_GlobalStandardPrevious">
+          <Key>
+            <PropertyRef Name="GlobalStandardPreviousID" />
+          </Key>
+          <Property Name="GlobalStandardPreviousID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PreviousStandardID" Type="Int32" />
+          <Property Name="CurrentStandardID" Type="Int32" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_GlobalSubject">
+          <Key>
+            <PropertyRef Name="QuotaID" />
+          </Key>
+          <Property Name="QuotaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GlabalStandardID" Type="Int32" />
+          <Property Name="AcadamicGroupMasterID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Abbrivation" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_Institute">
+          <Key>
+            <PropertyRef Name="Institute" />
+          </Key>
+          <Property Name="Institute" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AddressID" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tbl_Address" Relationship="TMSModel.FK_tbl_Institute_tbl_Address" FromRole="tbl_Institute" ToRole="tbl_Address" />
+        </EntityType>
+        <EntityType Name="tbl_Quota">
+          <Key>
+            <PropertyRef Name="QuotaID" />
+          </Key>
+          <Property Name="QuotaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Abbrivation" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_Reference">
+          <Key>
+            <PropertyRef Name="ReferenceID" />
+          </Key>
+          <Property Name="ReferenceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="UpdateDateTime" Type="DateTime" />
+          <Property Name="CreatedDateTime" Type="DateTime" />
+          <Property Name="Status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_RollNo">
+          <Key>
+            <PropertyRef Name="RollNOID" />
+          </Key>
+          <Property Name="RollNOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RollNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RollNoCount" Type="Int32" />
+          <Property Name="RollNoPatternID" Type="Int32" />
+          <Property Name="StudentID" Type="Int32" />
+          <Property Name="CourseID" Type="Int32" />
+          <Property Name="DivisionID" Type="Int32" />
+          <Property Name="AcademicYear" Type="Int32" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_RollNoPattern">
+          <Key>
+            <PropertyRef Name="RollNoPatternID" />
+          </Key>
+          <Property Name="RollNoPatternID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_State">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="ShortName" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="Updatedby" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" />
+          <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_UnauthorisedAccess">
+          <Key>
+            <PropertyRef Name="UnauthorisedAccessID" />
+          </Key>
+          <Property Name="UnauthorisedAccessID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="URL" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="AccessDatetime" Type="DateTime" />
+          <Property Name="IPAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDateTime" Type="DateTime" />
+          <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="UpdateDateTime" Type="DateTime" />
+          <Property Name="status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="UserType" Type="Int32" />
+          <Property Name="UserName" Type="Int32" />
+          <Property Name="Firstname" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Middlename" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="152" Unicode="true" FixedLength="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="DOB" Type="DateTime" />
+          <Property Name="Gender" Type="Int32" />
+          <Property Name="Mobile1" Type="Int32" />
+          <Property Name="Mobile1C" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Mobile2" Type="Int32" />
+          <Property Name="Mobile2C" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="AddressID" Type="Int32" />
+          <Property Name="DepartmentID" Type="Int32" />
+          <Property Name="EMail" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProfilePicPath" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="StartDatetime" Type="DateTime" />
+          <Property Name="ExpiryDatetime" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDateTime" Type="DateTime" />
+          <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="UpdateDateTime" Type="DateTime" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="IsApproved" Type="Int32" />
+          <Property Name="ApprovedBy" Type="Int32" />
+          <Property Name="IsEmailConfirmed" Type="Int32" />
+          <Property Name="IsPassNeverExpired" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_UserPasswordLog">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Password" Type="Int32" />
+          <Property Name="StartDatetime" Type="DateTime" />
+          <Property Name="EndDatetime" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDateTime" Type="DateTime" />
+          <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="UpdateDateTime" Type="DateTime" />
+          <Property Name="status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_UserSessionLog">
+          <Key>
+            <PropertyRef Name="UserSessionID" />
+          </Key>
+          <Property Name="UserSessionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="SignInDatetime" Type="DateTime" />
+          <Property Name="SignOutDatetime" Type="DateTime" />
+          <Property Name="IPAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDateTime" Type="DateTime" />
+          <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="UpdateDateTime" Type="DateTime" />
+          <Property Name="status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_Address">
+          <Key>
+            <PropertyRef Name="AddressID" />
+          </Key>
+          <Property Type="Int32" Name="AddressID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ContactType" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ContactID" />
+          <Property Type="Int32" Name="AddressType" />
+          <Property Type="String" Name="Address1" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address2" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Landmark" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Street" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CityID" />
+          <Property Type="Int32" Name="StateID" />
+          <Property Type="Int32" Name="CountryID" />
+          <Property Type="String" Name="Postalcode" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CretedDatetime" />
+          <Property Type="Int32" Name="UpdatedBy" />
+          <Property Type="DateTime" Name="UpdatedDatetime" />
+          <NavigationProperty Name="tbl_Institute" Relationship="TMSModel.FK_tbl_Institute_tbl_Address" FromRole="tbl_Address" ToRole="tbl_Institute" />
+          <NavigationProperty Name="tbl_GoverningBody" Relationship="TMSModel.FK_tbl_GoverningBody_tbl_GoverningBody" FromRole="tbl_Address" ToRole="tbl_GoverningBody" />
+          <NavigationProperty Name="tbl_InstituteBranch" Relationship="TMSModel.FK_tbl_InstituteBranch_tbl_Address" FromRole="tbl_Address" ToRole="tbl_InstituteBranch" />
+        </EntityType>
+        <EntityType Name="tbl_GoverningBody">
+          <Key>
+            <PropertyRef Name="GoverningBodyID" />
+          </Key>
+          <Property Type="Int32" Name="GoverningBodyID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IsSubType" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ParentGoverningBody" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedDate" />
+          <Property Type="Int32" Name="Updatedby" />
+          <Property Type="DateTime" Name="UpdatedDate" />
+          <Property Type="String" Name="status" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="AddressID" />
+          <NavigationProperty Name="tbl_Address" Relationship="TMSModel.FK_tbl_GoverningBody_tbl_GoverningBody" FromRole="tbl_GoverningBody" ToRole="tbl_Address" />
+        </EntityType>
+        <Association Name="FK_tbl_Institute_tbl_Address">
+          <End Type="TMSModel.tbl_Address" Role="tbl_Address" Multiplicity="0..1" />
+          <End Type="TMSModel.tbl_Institute" Role="tbl_Institute" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="tbl_Institute">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_GoverningBody_tbl_GoverningBody">
+          <End Type="TMSModel.tbl_Address" Role="tbl_Address" Multiplicity="0..1" />
+          <End Type="TMSModel.tbl_GoverningBody" Role="tbl_GoverningBody" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="tbl_GoverningBody">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tbl_InstituteBranch">
+          <Key>
+            <PropertyRef Name="BranchID" />
+          </Key>
+          <Property Type="Int32" Name="BranchID" Nullable="false" />
+          <Property Type="String" Name="BranchName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="AddressID" Nullable="false" />
+          <Property Type="Int32" Name="InstituteID" Nullable="false" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedDatetime" />
+          <Property Type="Int32" Name="UpdatedBy" />
+          <Property Type="DateTime" Name="UpdateDatetime" />
+          <Property Type="String" Name="status" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="description" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tbl_Address" Relationship="TMSModel.FK_tbl_InstituteBranch_tbl_Address" FromRole="tbl_InstituteBranch" ToRole="tbl_Address" />
+        </EntityType>
+        <Association Name="FK_tbl_InstituteBranch_tbl_Address">
+          <End Type="TMSModel.tbl_Address" Role="tbl_Address" Multiplicity="1" />
+          <End Type="TMSModel.tbl_InstituteBranch" Role="tbl_InstituteBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Address">
+              <PropertyRef Name="AddressID" />
+            </Principal>
+            <Dependent Role="tbl_InstituteBranch">
+              <PropertyRef Name="AddressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TMSModelStoreContainer" CdmEntityContainer="TMSEntities">
+          <EntitySetMapping Name="tbl_AcademicGroup">
+            <EntityTypeMapping TypeName="TMSModel.tbl_AcademicGroup">
+              <MappingFragment StoreEntitySet="tbl_AcademicGroup">
+                <ScalarProperty Name="AcademicGroupID" ColumnName="AcademicGroupID" />
+                <ScalarProperty Name="GlabalStandardID" ColumnName="GlabalStandardID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_AcademicYear">
+            <EntityTypeMapping TypeName="TMSModel.tbl_AcademicYear">
+              <MappingFragment StoreEntitySet="tbl_AcademicYear">
+                <ScalarProperty Name="AcademicYearID" ColumnName="AcademicYearID" />
+                <ScalarProperty Name="AcademicYear" ColumnName="AcademicYear" />
+                <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_BannedIP">
+            <EntityTypeMapping TypeName="TMSModel.tbl_BannedIP">
+              <MappingFragment StoreEntitySet="tbl_BannedIP">
+                <ScalarProperty Name="BannedIPID" ColumnName="BannedIPID" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDateTime" ColumnName="UpdateDateTime" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_City">
+            <EntityTypeMapping TypeName="TMSModel.tbl_City">
+              <MappingFragment StoreEntitySet="tbl_City">
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Country">
+            <EntityTypeMapping TypeName="TMSModel.tbl_Country">
+              <MappingFragment StoreEntitySet="tbl_Country">
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Course">
+            <EntityTypeMapping TypeName="TMSModel.tbl_Course">
+              <MappingFragment StoreEntitySet="tbl_Course">
+                <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="HasYears" ColumnName="HasYears" />
+                <ScalarProperty Name="NoofYears" ColumnName="NoofYears" />
+                <ScalarProperty Name="GoverningBodyID" ColumnName="GoverningBodyID" />
+                <ScalarProperty Name="GlabalStandardID" ColumnName="GlabalStandardID" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_CourseFeeTemplet">
+            <EntityTypeMapping TypeName="TMSModel.tbl_CourseFeeTemplet">
+              <MappingFragment StoreEntitySet="tbl_CourseFeeTemplet">
+                <ScalarProperty Name="CourseFeeTempletID" ColumnName="CourseFeeTempletID" />
+                <ScalarProperty Name="QuotaID" ColumnName="QuotaID" />
+                <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="FeeComponentID" ColumnName="FeeComponentID" />
+                <ScalarProperty Name="Abbrevation" ColumnName="Abbrevation" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsRefundale" ColumnName="IsRefundale" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Division">
+            <EntityTypeMapping TypeName="TMSModel.tbl_Division">
+              <MappingFragment StoreEntitySet="tbl_Division">
+                <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="AcademicYear" ColumnName="AcademicYear" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Document">
+            <EntityTypeMapping TypeName="TMSModel.tbl_Document">
+              <MappingFragment StoreEntitySet="tbl_Document">
+                <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_DocumentPath">
+            <EntityTypeMapping TypeName="TMSModel.tbl_DocumentPath">
+              <MappingFragment StoreEntitySet="tbl_DocumentPath">
+                <ScalarProperty Name="DocumentPathID" ColumnName="DocumentPathID" />
+                <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+                <ScalarProperty Name="ContactType" ColumnName="ContactType" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Faculty">
+            <EntityTypeMapping TypeName="TMSModel.tbl_Faculty">
+              <MappingFragment StoreEntitySet="tbl_Faculty">
+                <ScalarProperty Name="FID" ColumnName="FID" />
+                <ScalarProperty Name="FacultyID" ColumnName="FacultyID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+                <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
+                <ScalarProperty Name="LeaveDate" ColumnName="LeaveDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDatetime" ColumnName="UpdateDatetime" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_FeeComponent">
+            <EntityTypeMapping TypeName="TMSModel.tbl_FeeComponent">
+              <MappingFragment StoreEntitySet="tbl_FeeComponent">
+                <ScalarProperty Name="FeeComponentID" ColumnName="FeeComponentID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Abbrevation" ColumnName="Abbrevation" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_FinancialYear">
+            <EntityTypeMapping TypeName="TMSModel.tbl_FinancialYear">
+              <MappingFragment StoreEntitySet="tbl_FinancialYear">
+                <ScalarProperty Name="FinancialYearID" ColumnName="FinancialYearID" />
+                <ScalarProperty Name="FinancialYear" ColumnName="FinancialYear" />
+                <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_GlobalStandard">
+            <EntityTypeMapping TypeName="TMSModel.tbl_GlobalStandard">
+              <MappingFragment StoreEntitySet="tbl_GlobalStandard">
+                <ScalarProperty Name="GlobalStandardID" ColumnName="GlobalStandardID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_GlobalStandardNext">
+            <EntityTypeMapping TypeName="TMSModel.tbl_GlobalStandardNext">
+              <MappingFragment StoreEntitySet="tbl_GlobalStandardNext">
+                <ScalarProperty Name="GlobalStandardPreviousID" ColumnName="GlobalStandardPreviousID" />
+                <ScalarProperty Name="NextStandardID" ColumnName="NextStandardID" />
+                <ScalarProperty Name="CurrentStandardID" ColumnName="CurrentStandardID" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_GlobalStandardPrevious">
+            <EntityTypeMapping TypeName="TMSModel.tbl_GlobalStandardPrevious">
+              <MappingFragment StoreEntitySet="tbl_GlobalStandardPrevious">
+                <ScalarProperty Name="GlobalStandardPreviousID" ColumnName="GlobalStandardPreviousID" />
+                <ScalarProperty Name="PreviousStandardID" ColumnName="PreviousStandardID" />
+                <ScalarProperty Name="CurrentStandardID" ColumnName="CurrentStandardID" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_GlobalSubject">
+            <EntityTypeMapping TypeName="TMSModel.tbl_GlobalSubject">
+              <MappingFragment StoreEntitySet="tbl_GlobalSubject">
+                <ScalarProperty Name="QuotaID" ColumnName="QuotaID" />
+                <ScalarProperty Name="GlabalStandardID" ColumnName="GlabalStandardID" />
+                <ScalarProperty Name="AcadamicGroupMasterID" ColumnName="AcadamicGroupMasterID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Abbrivation" ColumnName="Abbrivation" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Institute">
+            <EntityTypeMapping TypeName="TMSModel.tbl_Institute">
+              <MappingFragment StoreEntitySet="tbl_Institute">
+                <ScalarProperty Name="Institute" ColumnName="Institute" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Quota">
+            <EntityTypeMapping TypeName="TMSModel.tbl_Quota">
+              <MappingFragment StoreEntitySet="tbl_Quota">
+                <ScalarProperty Name="QuotaID" ColumnName="QuotaID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Abbrivation" ColumnName="Abbrivation" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Reference">
+            <EntityTypeMapping TypeName="TMSModel.tbl_Reference">
+              <MappingFragment StoreEntitySet="tbl_Reference">
+                <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDateTime" ColumnName="UpdateDateTime" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_RollNo">
+            <EntityTypeMapping TypeName="TMSModel.tbl_RollNo">
+              <MappingFragment StoreEntitySet="tbl_RollNo">
+                <ScalarProperty Name="RollNOID" ColumnName="RollNOID" />
+                <ScalarProperty Name="RollNO" ColumnName="RollNO" />
+                <ScalarProperty Name="RollNoCount" ColumnName="RollNoCount" />
+                <ScalarProperty Name="RollNoPatternID" ColumnName="RollNoPatternID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+                <ScalarProperty Name="DivisionID" ColumnName="DivisionID" />
+                <ScalarProperty Name="AcademicYear" ColumnName="AcademicYear" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_RollNoPattern">
+            <EntityTypeMapping TypeName="TMSModel.tbl_RollNoPattern">
+              <MappingFragment StoreEntitySet="tbl_RollNoPattern">
+                <ScalarProperty Name="RollNoPatternID" ColumnName="RollNoPatternID" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_State">
+            <EntityTypeMapping TypeName="TMSModel.tbl_State">
+              <MappingFragment StoreEntitySet="tbl_State">
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_UnauthorisedAccess">
+            <EntityTypeMapping TypeName="TMSModel.tbl_UnauthorisedAccess">
+              <MappingFragment StoreEntitySet="tbl_UnauthorisedAccess">
+                <ScalarProperty Name="UnauthorisedAccessID" ColumnName="UnauthorisedAccessID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="AccessDatetime" ColumnName="AccessDatetime" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDateTime" ColumnName="UpdateDateTime" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_User">
+            <EntityTypeMapping TypeName="TMSModel.tbl_User">
+              <MappingFragment StoreEntitySet="tbl_User">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="Middlename" ColumnName="Middlename" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Mobile1" ColumnName="Mobile1" />
+                <ScalarProperty Name="Mobile1C" ColumnName="Mobile1C" />
+                <ScalarProperty Name="Mobile2" ColumnName="Mobile2" />
+                <ScalarProperty Name="Mobile2C" ColumnName="Mobile2C" />
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+                <ScalarProperty Name="EMail" ColumnName="EMail" />
+                <ScalarProperty Name="ProfilePicPath" ColumnName="ProfilePicPath" />
+                <ScalarProperty Name="StartDatetime" ColumnName="StartDatetime" />
+                <ScalarProperty Name="ExpiryDatetime" ColumnName="ExpiryDatetime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDateTime" ColumnName="UpdateDateTime" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+                <ScalarProperty Name="IsEmailConfirmed" ColumnName="IsEmailConfirmed" />
+                <ScalarProperty Name="IsPassNeverExpired" ColumnName="IsPassNeverExpired" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_UserPasswordLog">
+            <EntityTypeMapping TypeName="TMSModel.tbl_UserPasswordLog">
+              <MappingFragment StoreEntitySet="tbl_UserPasswordLog">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="StartDatetime" ColumnName="StartDatetime" />
+                <ScalarProperty Name="EndDatetime" ColumnName="EndDatetime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDateTime" ColumnName="UpdateDateTime" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_UserSessionLog">
+            <EntityTypeMapping TypeName="TMSModel.tbl_UserSessionLog">
+              <MappingFragment StoreEntitySet="tbl_UserSessionLog">
+                <ScalarProperty Name="UserSessionID" ColumnName="UserSessionID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="SignInDatetime" ColumnName="SignInDatetime" />
+                <ScalarProperty Name="SignOutDatetime" ColumnName="SignOutDatetime" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDateTime" ColumnName="UpdateDateTime" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Address">
+            <EntityTypeMapping TypeName="TMSModel.tbl_Address">
+              <MappingFragment StoreEntitySet="tbl_Address">
+                <ScalarProperty Name="UpdatedDatetime" ColumnName="UpdatedDatetime" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CretedDatetime" ColumnName="CretedDatetime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Postalcode" ColumnName="Postalcode" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="Landmark" ColumnName="Landmark" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="AddressType" ColumnName="AddressType" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="ContactType" ColumnName="ContactType" />
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_GoverningBody">
+            <EntityTypeMapping TypeName="TMSModel.tbl_GoverningBody">
+              <MappingFragment StoreEntitySet="tbl_GoverningBody">
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ParentGoverningBody" ColumnName="ParentGoverningBody" />
+                <ScalarProperty Name="IsSubType" ColumnName="IsSubType" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="GoverningBodyID" ColumnName="GoverningBodyID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_InstituteBranch">
+            <EntityTypeMapping TypeName="TMSModel.tbl_InstituteBranch">
+              <MappingFragment StoreEntitySet="tbl_InstituteBranch">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="UpdateDatetime" ColumnName="UpdateDatetime" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDatetime" ColumnName="CreatedDatetime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="InstituteID" ColumnName="InstituteID" />
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="TMS">
+        <EntityTypeShape EntityType="TMSModel.tbl_AcademicGroup" Width="1.5" PointX="0.75" PointY="0.75" Height="2.5571907552083331" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_AcademicYear" Width="1.5" PointX="2.75" PointY="0.75" Height="2.9417936197916665" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_BannedIP" Width="1.5" PointX="0.75" PointY="4.75" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_City" Width="1.5" PointX="2.75" PointY="5.75" Height="2.9417936197916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_Country" Width="1.5" PointX="4.75" PointY="5.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_Course" Width="1.5" PointX="6.75" PointY="0.75" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_CourseFeeTemplet" Width="1.5" PointX="6.75" PointY="5.75" Height="3.5186979166666656" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_Division" Width="1.5" PointX="8.75" PointY="0.75" Height="2.9417936197916665" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_Document" Width="1.5" PointX="8.75" PointY="4.75" Height="2.5571907552083326" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_DocumentPath" Width="1.5" PointX="8.75" PointY="8.75" Height="2.9417936197916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_Faculty" Width="1.5" PointX="0.75" PointY="9.75" Height="4.6725065104166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_FeeComponent" Width="1.5" PointX="2.75" PointY="9.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_FinancialYear" Width="1.5" PointX="10.75" PointY="0.75" Height="2.9417936197916665" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_GlobalStandard" Width="1.5" PointX="10.75" PointY="4.75" Height="2.5571907552083326" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_GlobalStandardNext" Width="1.5" PointX="4.75" PointY="10.75" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_GlobalStandardPrevious" Width="1.5" PointX="10.75" PointY="8.75" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_GlobalSubject" Width="1.5" PointX="12.75" PointY="0.75" Height="3.1340950520833331" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_Institute" Width="1.5" PointX="6.75" PointY="12.75" Height="1.7879850260416657" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_Quota" Width="1.5" PointX="12.75" PointY="8.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_Reference" Width="1.5" PointX="8.75" PointY="12.75" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_RollNo" Width="1.5" PointX="10.75" PointY="12.75" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_RollNoPattern" Width="1.5" PointX="12.75" PointY="12.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_State" Width="1.5" PointX="14.75" PointY="0.75" Height="2.9417936197916665" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_UnauthorisedAccess" Width="1.5" PointX="2.75" PointY="14.75" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_User" Width="1.5" PointX="16.75" PointY="4.75" Height="6.4032194010416656" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_UserPasswordLog" Width="1.5" PointX="14.75" PointY="12.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_UserSessionLog" Width="1.5" PointX="4.75" PointY="15.75" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_Address" Width="1.5" PointX="7.375" PointY="16.75" Height="4.0956022135416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TMSModel.tbl_GoverningBody" Width="1.5" PointX="13.375" PointY="4.75" Height="2.7494921875000102" />
+        <AssociationConnector Association="TMSModel.FK_tbl_Institute_tbl_Address" >
+          <ConnectorPoint PointX="7.8125" PointY="16.75" />
+          <ConnectorPoint PointX="7.8125" PointY="14.730286458333332" />
+        </AssociationConnector>
+        <AssociationConnector Association="TMSModel.FK_tbl_GoverningBody_tbl_GoverningBody" >
+          <ConnectorPoint PointX="8.875" PointY="19.086253255208334" />
+          <ConnectorPoint PointX="13.125" PointY="19.086253255208334" />
+          <ConnectorPoint PointX="13.125" PointY="15.172587890625001" />
+          <ConnectorPoint PointX="14.5" PointY="15.172587890625001" />
+          <ConnectorPoint PointX="14.5" PointY="8.2590950520833317" />
+          <ConnectorPoint PointX="14.125" PointY="8.2590950520833317" />
+          <ConnectorPoint PointX="14.125" PointY="7.8840950520833317" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="TMSModel.tbl_InstituteBranch" Width="1.5" PointX="13.375" PointY="16.75" Height="2.7494921875000102" />
+        <AssociationConnector Association="TMSModel.FK_tbl_InstituteBranch_tbl_Address" >
+          <ConnectorPoint PointX="8.875" PointY="17.855626627604167" />
+          <ConnectorPoint PointX="13.041666666666666" PointY="17.855626627604167" />
+          <ConnectorPoint PointX="13.208333333333334" PointY="17.855626627604167" />
+          <ConnectorPoint PointX="13.375" PointY="17.855626627604167" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,51 @@
+D:\TMS\TMS\TMS.DataModel\obj\Debug\ResolveAssemblyReference.cache
+D:\TMS\TMS\TMS.DataModel\bin\TMS.DataModel.dll
+D:\TMS\TMS\TMS.DataModel\bin\TMS.DataModel.pdb
+D:\TMS\TMS\TMS.DataModel\bin\TMS.Repository.dll
+D:\TMS\TMS\TMS.DataModel\bin\TMS.Repository.pdb
+D:\TMS\TMS\TMS.DataModel\obj\Debug\TMS.DataModel.dll
+D:\TMS\TMS\TMS.DataModel\obj\Debug\TMS.DataModel.pdb
+D:\Mayur\TMS\TMS.DataModel\bin\TMS.DataModel.dll
+D:\Mayur\TMS\TMS.DataModel\bin\TMS.DataModel.pdb
+D:\Mayur\TMS\TMS.DataModel\bin\TMS.Repository.dll
+D:\Mayur\TMS\TMS.DataModel\bin\TMS.Repository.pdb
+D:\Mayur\TMS\TMS.DataModel\obj\Debug\TMS.DataModel.csprojResolveAssemblyReference.cache
+D:\Mayur\TMS\TMS.DataModel\obj\Debug\TMS.DataModel.dll
+D:\Mayur\TMS\TMS.DataModel\obj\Debug\TMS.DataModel.pdb
+D:\Mayur\TMS Edited\TMS.DataModel\obj\Debug\TMS.DataModel.csprojResolveAssemblyReference.cache
+D:\Mayur\TMS Edited\TMS.DataModel\obj\Debug\TMS.DataModel.dll
+D:\Mayur\TMS Edited\TMS.DataModel\obj\Debug\TMS.DataModel.pdb
+D:\Mayur\TMS Edited\TMS.DataModel\bin\TMS.DataModel.dll
+D:\Mayur\TMS Edited\TMS.DataModel\bin\TMS.DataModel.pdb
+D:\Mayur\TMS Edited\TMS.DataModel\bin\TMS.Repository.dll
+D:\Mayur\TMS Edited\TMS.DataModel\bin\TMS.Repository.pdb
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS.DataModel\bin\TMS.DataModel.dll
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS.DataModel\bin\TMS.DataModel.pdb
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS.DataModel\bin\TMS.Repository.dll
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS.DataModel\bin\TMS.Repository.pdb
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS.DataModel\obj\Debug\TMS.DataModel.csprojResolveAssemblyReference.cache
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS.DataModel\obj\Debug\TMS.DataModel.dll
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS.DataModel\obj\Debug\TMS.DataModel.pdb
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS.DataModel\bin\TMS.DataModel.dll
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS.DataModel\bin\TMS.DataModel.pdb
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS.DataModel\bin\TMS.Repository.dll
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS.DataModel\bin\TMS.Repository.pdb
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS.DataModel\obj\Debug\TMS.DataModel.csprojResolveAssemblyReference.cache
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS.DataModel\obj\Debug\TMS.DataModel.dll
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS.DataModel\obj\Debug\TMS.DataModel.pdb
+D:\Mayur\TMS Mayur\TMS.DataModel\bin\TMS.DataModel.dll
+D:\Mayur\TMS Mayur\TMS.DataModel\bin\TMS.DataModel.pdb
+D:\Mayur\TMS Mayur\TMS.DataModel\bin\TMS.Repository.dll
+D:\Mayur\TMS Mayur\TMS.DataModel\bin\TMS.Repository.pdb
+D:\Mayur\TMS Mayur\TMS.DataModel\obj\Debug\TMS.DataModel.csprojResolveAssemblyReference.cache
+D:\Mayur\TMS Mayur\TMS.DataModel\obj\Debug\TMS.DataModel.dll
+D:\Mayur\TMS Mayur\TMS.DataModel\obj\Debug\TMS.DataModel.pdb
+D:\Mayur\TMS Mayur\TMS.DataModel\bin\log4net.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS.DataModel\bin\TMS.DataModel.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS.DataModel\bin\TMS.DataModel.pdb
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS.DataModel\bin\log4net.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS.DataModel\bin\TMS.Repository.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS.DataModel\bin\TMS.Repository.pdb
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS.DataModel\obj\Debug\TMS.DataModel.csprojResolveAssemblyReference.cache
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS.DataModel\obj\Debug\TMS.DataModel.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS.DataModel\obj\Debug\TMS.DataModel.pdb

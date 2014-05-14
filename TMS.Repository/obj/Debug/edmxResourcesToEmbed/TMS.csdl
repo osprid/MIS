@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TMSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="TMSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_AcademicGroup" EntityType="TMSModel.tbl_AcademicGroup" />
+    <EntitySet Name="tbl_AcademicYear" EntityType="TMSModel.tbl_AcademicYear" />
+    <EntitySet Name="tbl_BannedIP" EntityType="TMSModel.tbl_BannedIP" />
+    <EntitySet Name="tbl_City" EntityType="TMSModel.tbl_City" />
+    <EntitySet Name="tbl_Country" EntityType="TMSModel.tbl_Country" />
+    <EntitySet Name="tbl_Course" EntityType="TMSModel.tbl_Course" />
+    <EntitySet Name="tbl_CourseFeeTemplet" EntityType="TMSModel.tbl_CourseFeeTemplet" />
+    <EntitySet Name="tbl_Division" EntityType="TMSModel.tbl_Division" />
+    <EntitySet Name="tbl_Document" EntityType="TMSModel.tbl_Document" />
+    <EntitySet Name="tbl_DocumentPath" EntityType="TMSModel.tbl_DocumentPath" />
+    <EntitySet Name="tbl_Faculty" EntityType="TMSModel.tbl_Faculty" />
+    <EntitySet Name="tbl_FeeComponent" EntityType="TMSModel.tbl_FeeComponent" />
+    <EntitySet Name="tbl_FinancialYear" EntityType="TMSModel.tbl_FinancialYear" />
+    <EntitySet Name="tbl_GlobalStandard" EntityType="TMSModel.tbl_GlobalStandard" />
+    <EntitySet Name="tbl_GlobalStandardNext" EntityType="TMSModel.tbl_GlobalStandardNext" />
+    <EntitySet Name="tbl_GlobalStandardPrevious" EntityType="TMSModel.tbl_GlobalStandardPrevious" />
+    <EntitySet Name="tbl_GlobalSubject" EntityType="TMSModel.tbl_GlobalSubject" />
+    <EntitySet Name="tbl_Institute" EntityType="TMSModel.tbl_Institute" />
+    <EntitySet Name="tbl_Quota" EntityType="TMSModel.tbl_Quota" />
+    <EntitySet Name="tbl_Reference" EntityType="TMSModel.tbl_Reference" />
+    <EntitySet Name="tbl_RollNo" EntityType="TMSModel.tbl_RollNo" />
+    <EntitySet Name="tbl_RollNoPattern" EntityType="TMSModel.tbl_RollNoPattern" />
+    <EntitySet Name="tbl_State" EntityType="TMSModel.tbl_State" />
+    <EntitySet Name="tbl_UnauthorisedAccess" EntityType="TMSModel.tbl_UnauthorisedAccess" />
+    <EntitySet Name="tbl_User" EntityType="TMSModel.tbl_User" />
+    <EntitySet Name="tbl_UserPasswordLog" EntityType="TMSModel.tbl_UserPasswordLog" />
+    <EntitySet Name="tbl_UserSessionLog" EntityType="TMSModel.tbl_UserSessionLog" />
+    <EntitySet Name="tbl_Address" EntityType="TMSModel.tbl_Address" />
+    <EntitySet Name="tbl_GoverningBody" EntityType="TMSModel.tbl_GoverningBody" />
+    <AssociationSet Name="FK_tbl_Institute_tbl_Address" Association="TMSModel.FK_tbl_Institute_tbl_Address">
+      <End Role="tbl_Address" EntitySet="tbl_Address" />
+      <End Role="tbl_Institute" EntitySet="tbl_Institute" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_GoverningBody_tbl_GoverningBody" Association="TMSModel.FK_tbl_GoverningBody_tbl_GoverningBody">
+      <End Role="tbl_Address" EntitySet="tbl_Address" />
+      <End Role="tbl_GoverningBody" EntitySet="tbl_GoverningBody" />
+    </AssociationSet>
+    <EntitySet Name="tbl_InstituteBranch" EntityType="TMSModel.tbl_InstituteBranch" />
+    <AssociationSet Name="FK_tbl_InstituteBranch_tbl_Address" Association="TMSModel.FK_tbl_InstituteBranch_tbl_Address">
+      <End Role="tbl_Address" EntitySet="tbl_Address" />
+      <End Role="tbl_InstituteBranch" EntitySet="tbl_InstituteBranch" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tbl_AcademicGroup">
+    <Key>
+      <PropertyRef Name="AcademicGroupID" />
+    </Key>
+    <Property Name="AcademicGroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GlabalStandardID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_AcademicYear">
+    <Key>
+      <PropertyRef Name="AcademicYearID" />
+    </Key>
+    <Property Name="AcademicYearID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AcademicYear" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Abbreviation" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_BannedIP">
+    <Key>
+      <PropertyRef Name="BannedIPID" />
+    </Key>
+    <Property Name="BannedIPID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IPAddress" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" />
+    <Property Name="UpdateBy" Type="Int32" />
+    <Property Name="UpdateDateTime" Type="DateTime" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_City">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ShortName" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_Country">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ShortName" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_Course">
+    <Key>
+      <PropertyRef Name="CourseID" />
+    </Key>
+    <Property Name="CourseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Duration" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="HasYears" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="NoofYears" Type="Int32" />
+    <Property Name="GoverningBodyID" Type="Int32" />
+    <Property Name="GlabalStandardID" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_CourseFeeTemplet">
+    <Key>
+      <PropertyRef Name="CourseFeeTempletID" />
+    </Key>
+    <Property Name="CourseFeeTempletID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QuotaID" Type="Int32" />
+    <Property Name="CourseID" Type="Int32" />
+    <Property Name="Amount" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FeeComponentID" Type="Int32" />
+    <Property Name="Abbrevation" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="IsRefundale" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" />
+    <Property Name="UpdateBy" Type="Int32" />
+    <Property Name="UpdateDate" Type="DateTime" />
+    <Property Name="Status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_Division">
+    <Key>
+      <PropertyRef Name="DivisionID" />
+    </Key>
+    <Property Name="DivisionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CourseID" Type="Int32" />
+    <Property Name="Capacity" Type="Int32" />
+    <Property Name="AcademicYear" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_Document">
+    <Key>
+      <PropertyRef Name="DocumentID" />
+    </Key>
+    <Property Name="DocumentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_DocumentPath">
+    <Key>
+      <PropertyRef Name="DocumentPathID" />
+    </Key>
+    <Property Name="DocumentPathID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentID" Type="Int32" />
+    <Property Name="ContactType" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="ContactID" Type="Int32" />
+    <Property Name="Path" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_Faculty">
+    <Key>
+      <PropertyRef Name="FacultyID" />
+    </Key>
+    <Property Name="FID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FacultyID" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Title" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="152" Unicode="true" FixedLength="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DOB" Type="DateTime" />
+    <Property Name="MaritalStatus" Type="Int32" />
+    <Property Name="AddressID" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ReferenceID" Type="Int32" />
+    <Property Name="JoinDate" Type="DateTime" />
+    <Property Name="LeaveDate" Type="DateTime" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" />
+    <Property Name="UpdateBy" Type="Int32" />
+    <Property Name="UpdateDatetime" Type="DateTime" />
+    <Property Name="Gender" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_FeeComponent">
+    <Key>
+      <PropertyRef Name="FeeComponentID" />
+    </Key>
+    <Property Name="FeeComponentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Abbrevation" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" />
+    <Property Name="UpdateBy" Type="Int32" />
+    <Property Name="UpdateDate" Type="DateTime" />
+    <Property Name="Status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_FinancialYear">
+    <Key>
+      <PropertyRef Name="FinancialYearID" />
+    </Key>
+    <Property Name="FinancialYearID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FinancialYear" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Abbreviation" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_GlobalStandard">
+    <Key>
+      <PropertyRef Name="GlobalStandardID" />
+    </Key>
+    <Property Name="GlobalStandardID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_GlobalStandardNext">
+    <Key>
+      <PropertyRef Name="GlobalStandardPreviousID" />
+    </Key>
+    <Property Name="GlobalStandardPreviousID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NextStandardID" Type="Int32" />
+    <Property Name="CurrentStandardID" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_GlobalStandardPrevious">
+    <Key>
+      <PropertyRef Name="GlobalStandardPreviousID" />
+    </Key>
+    <Property Name="GlobalStandardPreviousID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PreviousStandardID" Type="Int32" />
+    <Property Name="CurrentStandardID" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_GlobalSubject">
+    <Key>
+      <PropertyRef Name="QuotaID" />
+    </Key>
+    <Property Name="QuotaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GlabalStandardID" Type="Int32" />
+    <Property Name="AcadamicGroupMasterID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Abbrivation" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_Institute">
+    <Key>
+      <PropertyRef Name="Institute" />
+    </Key>
+    <Property Name="Institute" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AddressID" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tbl_Address" Relationship="TMSModel.FK_tbl_Institute_tbl_Address" FromRole="tbl_Institute" ToRole="tbl_Address" />
+  </EntityType>
+  <EntityType Name="tbl_Quota">
+    <Key>
+      <PropertyRef Name="QuotaID" />
+    </Key>
+    <Property Name="QuotaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Abbrivation" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_Reference">
+    <Key>
+      <PropertyRef Name="ReferenceID" />
+    </Key>
+    <Property Name="ReferenceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="UpdateBy" Type="Int32" />
+    <Property Name="UpdateDateTime" Type="DateTime" />
+    <Property Name="CreatedDateTime" Type="DateTime" />
+    <Property Name="Status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_RollNo">
+    <Key>
+      <PropertyRef Name="RollNOID" />
+    </Key>
+    <Property Name="RollNOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RollNO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="RollNoCount" Type="Int32" />
+    <Property Name="RollNoPatternID" Type="Int32" />
+    <Property Name="StudentID" Type="Int32" />
+    <Property Name="CourseID" Type="Int32" />
+    <Property Name="DivisionID" Type="Int32" />
+    <Property Name="AcademicYear" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_RollNoPattern">
+    <Key>
+      <PropertyRef Name="RollNoPatternID" />
+    </Key>
+    <Property Name="RollNoPatternID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_State">
+    <Key>
+      <PropertyRef Name="StateID" />
+    </Key>
+    <Property Name="StateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ShortName" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" />
+    <Property Name="Updatedby" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" />
+    <Property Name="status" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_UnauthorisedAccess">
+    <Key>
+      <PropertyRef Name="UnauthorisedAccessID" />
+    </Key>
+    <Property Name="UnauthorisedAccessID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="URL" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="AccessDatetime" Type="DateTime" />
+    <Property Name="IPAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" />
+    <Property Name="UpdateBy" Type="Int32" />
+    <Property Name="UpdateDateTime" Type="DateTime" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="UserType" Type="Int32" />
+    <Property Name="UserName" Type="Int32" />
+    <Property Name="Firstname" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Middlename" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="152" Unicode="true" FixedLength="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DOB" Type="DateTime" />
+    <Property Name="Gender" Type="Int32" />
+    <Property Name="Mobile1" Type="Int32" />
+    <Property Name="Mobile1C" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Mobile2" Type="Int32" />
+    <Property Name="Mobile2C" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="AddressID" Type="Int32" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="EMail" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProfilePicPath" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="StartDatetime" Type="DateTime" />
+    <Property Name="ExpiryDatetime" Type="DateTime" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" />
+    <Property Name="UpdateBy" Type="Int32" />
+    <Property Name="UpdateDateTime" Type="DateTime" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="IsApproved" Type="Int32" />
+    <Property Name="ApprovedBy" Type="Int32" />
+    <Property Name="IsEmailConfirmed" Type="Int32" />
+    <Property Name="IsPassNeverExpired" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_UserPasswordLog">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Password" Type="Int32" />
+    <Property Name="StartDatetime" Type="DateTime" />
+    <Property Name="EndDatetime" Type="DateTime" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" />
+    <Property Name="UpdateBy" Type="Int32" />
+    <Property Name="UpdateDateTime" Type="DateTime" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_UserSessionLog">
+    <Key>
+      <PropertyRef Name="UserSessionID" />
+    </Key>
+    <Property Name="UserSessionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="SignInDatetime" Type="DateTime" />
+    <Property Name="SignOutDatetime" Type="DateTime" />
+    <Property Name="IPAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDateTime" Type="DateTime" />
+    <Property Name="UpdateBy" Type="Int32" />
+    <Property Name="UpdateDateTime" Type="DateTime" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_Address">
+    <Key>
+      <PropertyRef Name="AddressID" />
+    </Key>
+    <Property Type="Int32" Name="AddressID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ContactType" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ContactID" />
+    <Property Type="Int32" Name="AddressType" />
+    <Property Type="String" Name="Address1" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address2" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Landmark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Street" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CityID" />
+    <Property Type="Int32" Name="StateID" />
+    <Property Type="Int32" Name="CountryID" />
+    <Property Type="String" Name="Postalcode" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CretedDatetime" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedDatetime" />
+    <NavigationProperty Name="tbl_Institute" Relationship="TMSModel.FK_tbl_Institute_tbl_Address" FromRole="tbl_Address" ToRole="tbl_Institute" />
+    <NavigationProperty Name="tbl_GoverningBody" Relationship="TMSModel.FK_tbl_GoverningBody_tbl_GoverningBody" FromRole="tbl_Address" ToRole="tbl_GoverningBody" />
+    <NavigationProperty Name="tbl_InstituteBranch" Relationship="TMSModel.FK_tbl_InstituteBranch_tbl_Address" FromRole="tbl_Address" ToRole="tbl_InstituteBranch" />
+  </EntityType>
+  <EntityType Name="tbl_GoverningBody">
+    <Key>
+      <PropertyRef Name="GoverningBodyID" />
+    </Key>
+    <Property Type="Int32" Name="GoverningBodyID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IsSubType" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ParentGoverningBody" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedDate" />
+    <Property Type="Int32" Name="Updatedby" />
+    <Property Type="DateTime" Name="UpdatedDate" />
+    <Property Type="String" Name="status" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="AddressID" />
+    <NavigationProperty Name="tbl_Address" Relationship="TMSModel.FK_tbl_GoverningBody_tbl_GoverningBody" FromRole="tbl_GoverningBody" ToRole="tbl_Address" />
+  </EntityType>
+  <Association Name="FK_tbl_Institute_tbl_Address">
+    <End Type="TMSModel.tbl_Address" Role="tbl_Address" Multiplicity="0..1" />
+    <End Type="TMSModel.tbl_Institute" Role="tbl_Institute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="tbl_Institute">
+        <PropertyRef Name="AddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_GoverningBody_tbl_GoverningBody">
+    <End Type="TMSModel.tbl_Address" Role="tbl_Address" Multiplicity="0..1" />
+    <End Type="TMSModel.tbl_GoverningBody" Role="tbl_GoverningBody" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="tbl_GoverningBody">
+        <PropertyRef Name="AddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_InstituteBranch">
+    <Key>
+      <PropertyRef Name="BranchID" />
+    </Key>
+    <Property Type="Int32" Name="BranchID" Nullable="false" />
+    <Property Type="String" Name="BranchName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="AddressID" Nullable="false" />
+    <Property Type="Int32" Name="InstituteID" Nullable="false" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedDatetime" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdateDatetime" />
+    <Property Type="String" Name="status" MaxLength="4" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="description" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Address" Relationship="TMSModel.FK_tbl_InstituteBranch_tbl_Address" FromRole="tbl_InstituteBranch" ToRole="tbl_Address" />
+  </EntityType>
+  <Association Name="FK_tbl_InstituteBranch_tbl_Address">
+    <End Type="TMSModel.tbl_Address" Role="tbl_Address" Multiplicity="1" />
+    <End Type="TMSModel.tbl_InstituteBranch" Role="tbl_InstituteBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="tbl_InstituteBranch">
+        <PropertyRef Name="AddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,35 @@
+D:\TMS\TMS\TMS.Repository\bin\TMS.Repository.dll
+D:\TMS\TMS\TMS.Repository\bin\TMS.Repository.pdb
+D:\TMS\TMS\TMS.Repository\obj\Debug\ResolveAssemblyReference.cache
+D:\TMS\TMS\TMS.Repository\obj\Debug\TMS.Repository.dll
+D:\TMS\TMS\TMS.Repository\obj\Debug\TMS.Repository.pdb
+D:\Mayur\TMS\TMS.Repository\bin\TMS.Repository.dll
+D:\Mayur\TMS\TMS.Repository\bin\TMS.Repository.pdb
+D:\Mayur\TMS\TMS.Repository\obj\Debug\TMS.Repository.csprojResolveAssemblyReference.cache
+D:\Mayur\TMS\TMS.Repository\obj\Debug\TMS.Repository.dll
+D:\Mayur\TMS\TMS.Repository\obj\Debug\TMS.Repository.pdb
+D:\Mayur\TMS Edited\TMS.Repository\bin\TMS.Repository.dll
+D:\Mayur\TMS Edited\TMS.Repository\bin\TMS.Repository.pdb
+D:\Mayur\TMS Edited\TMS.Repository\obj\Debug\TMS.Repository.csprojResolveAssemblyReference.cache
+D:\Mayur\TMS Edited\TMS.Repository\obj\Debug\TMS.Repository.dll
+D:\Mayur\TMS Edited\TMS.Repository\obj\Debug\TMS.Repository.pdb
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS.Repository\bin\TMS.Repository.dll
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS.Repository\bin\TMS.Repository.pdb
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS.Repository\obj\Debug\TMS.Repository.csprojResolveAssemblyReference.cache
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS.Repository\obj\Debug\TMS.Repository.dll
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS.Repository\obj\Debug\TMS.Repository.pdb
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS.Repository\bin\TMS.Repository.dll
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS.Repository\bin\TMS.Repository.pdb
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS.Repository\obj\Debug\TMS.Repository.dll
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS.Repository\obj\Debug\TMS.Repository.pdb
+D:\Mayur\TMS Mayur\TMS.Repository\bin\TMS.Repository.dll
+D:\Mayur\TMS Mayur\TMS.Repository\bin\TMS.Repository.pdb
+D:\Mayur\TMS Mayur\TMS.Repository\obj\Debug\TMS.Repository.dll
+D:\Mayur\TMS Mayur\TMS.Repository\obj\Debug\TMS.Repository.pdb
+D:\Mayur\TMS Mayur\TMS.Repository\bin\log4net.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS.Repository\bin\TMS.Repository.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS.Repository\bin\TMS.Repository.pdb
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS.Repository\bin\log4net.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS.Repository\obj\Debug\TMS.Repository.csprojResolveAssemblyReference.cache
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS.Repository\obj\Debug\TMS.Repository.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS.Repository\obj\Debug\TMS.Repository.pdb

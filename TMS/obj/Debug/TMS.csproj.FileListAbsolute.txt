@@ -1,0 +1,65 @@
+D:\TMS\TMS\TMS\bin\TMS.dll
+D:\TMS\TMS\TMS\bin\TMS.pdb
+D:\TMS\TMS\TMS\obj\Debug\ResolveAssemblyReference.cache
+D:\TMS\TMS\TMS\obj\Debug\TMS.dll
+D:\TMS\TMS\TMS\obj\Debug\TMS.pdb
+D:\TMS\TMS\TMS\bin\TMS.DataModel.dll
+D:\TMS\TMS\TMS\bin\TMS.Repository.dll
+D:\TMS\TMS\TMS\bin\TMS.DataModel.pdb
+D:\TMS\TMS\TMS\bin\TMS.Repository.pdb
+D:\Mayur\TMS\TMS\bin\TMS.dll
+D:\Mayur\TMS\TMS\bin\TMS.pdb
+D:\Mayur\TMS\TMS\bin\TMS.DataModel.dll
+D:\Mayur\TMS\TMS\bin\TMS.Repository.dll
+D:\Mayur\TMS\TMS\bin\TMS.DataModel.pdb
+D:\Mayur\TMS\TMS\bin\TMS.Repository.pdb
+D:\Mayur\TMS\TMS\obj\Debug\TMS.csprojResolveAssemblyReference.cache
+D:\Mayur\TMS\TMS\obj\Debug\TMS.dll
+D:\Mayur\TMS\TMS\obj\Debug\TMS.pdb
+D:\Mayur\TMS Edited\TMS\bin\TMS.dll
+D:\Mayur\TMS Edited\TMS\bin\TMS.pdb
+D:\Mayur\TMS Edited\TMS\bin\TMS.DataModel.dll
+D:\Mayur\TMS Edited\TMS\bin\TMS.Repository.dll
+D:\Mayur\TMS Edited\TMS\bin\TMS.DataModel.pdb
+D:\Mayur\TMS Edited\TMS\bin\TMS.Repository.pdb
+D:\Mayur\TMS Edited\TMS\obj\Debug\TMS.csprojResolveAssemblyReference.cache
+D:\Mayur\TMS Edited\TMS\obj\Debug\TMS.dll
+D:\Mayur\TMS Edited\TMS\obj\Debug\TMS.pdb
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS\bin\TMS.dll
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS\bin\TMS.pdb
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS\bin\TMS.DataModel.dll
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS\bin\TMS.Repository.dll
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS\bin\TMS.DataModel.pdb
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS\bin\TMS.Repository.pdb
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS\obj\Debug\TMS.csprojResolveAssemblyReference.cache
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS\obj\Debug\TMS.dll
+D:\@day\pages\osprid\projects\TMS Edited\TMS Edited\TMS\obj\Debug\TMS.pdb
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS\bin\TMS.dll
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS\bin\TMS.pdb
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS\bin\TMS.DataModel.dll
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS\bin\TMS.Repository.dll
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS\bin\TMS.DataModel.pdb
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS\bin\TMS.Repository.pdb
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS\obj\Debug\TMS.csprojResolveAssemblyReference.cache
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS\obj\Debug\TMS.dll
+C:\Users\Webformatics3\Desktop\TMS Mayur\TMS\obj\Debug\TMS.pdb
+D:\Mayur\TMS Mayur\TMS\bin\TMS.dll
+D:\Mayur\TMS Mayur\TMS\bin\TMS.pdb
+D:\Mayur\TMS Mayur\TMS\bin\TMS.DataModel.dll
+D:\Mayur\TMS Mayur\TMS\bin\TMS.Repository.dll
+D:\Mayur\TMS Mayur\TMS\bin\TMS.DataModel.pdb
+D:\Mayur\TMS Mayur\TMS\bin\TMS.Repository.pdb
+D:\Mayur\TMS Mayur\TMS\obj\Debug\TMS.csprojResolveAssemblyReference.cache
+D:\Mayur\TMS Mayur\TMS\obj\Debug\TMS.dll
+D:\Mayur\TMS Mayur\TMS\obj\Debug\TMS.pdb
+D:\Mayur\TMS Mayur\TMS\bin\log4net.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS\bin\TMS.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS\bin\TMS.pdb
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS\bin\log4net.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS\bin\TMS.DataModel.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS\bin\TMS.Repository.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS\bin\TMS.DataModel.pdb
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS\bin\TMS.Repository.pdb
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS\obj\Debug\TMS.csprojResolveAssemblyReference.cache
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS\obj\Debug\TMS.dll
+D:\@day\pages\osprid\projects\MIS\MIS\TMS Mayur\TMS\obj\Debug\TMS.pdb
